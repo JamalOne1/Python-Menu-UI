@@ -20,8 +20,7 @@ while True:
     print(" 1.  Read file")  
     print(" 2.  Write to file")  
     print(" 3.  Set filename")  
-    # print("3. Multiplication of two Numbers")  
-    # print("4. Division of two Numbers")  
+    # print(" 4. to add more options in menu")  
     print(" 5.  Exit")  
 
     print("\n Current filename: " + fname + ".txt\n")
