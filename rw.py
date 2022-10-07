@@ -3,6 +3,11 @@
 # https://pyautogui.readthedocs.io/en/latest/quickstart.html
 import pyautogui
 
+   
+  
+# Imports PIL module 
+from PIL import Image
+
 fname = "demofile2" #default filename
 
 def w_function(newtxt):
@@ -20,7 +25,7 @@ while True:
     print(" 1.  Read file")  
     print(" 2.  Write to file")  
     print(" 3.  Set filename")  
-    # print(" 4. to add more options in menu")  
+    print(" 4.  Screendump to scrdmp.png")  
     print(" 5.  Exit")  
 
     print("\n Current filename: " + fname + ".txt\n")
@@ -41,12 +46,18 @@ while True:
         #print(r_function())
         print("\n---\n\n")
     elif users_choice == 3:  
-            print( "\nSet filename\n---\n")  
-            print(" Old filename: " + fname)
-            fname = input(" New filename: ")
-            f = open(fname +".txt", "a")
-            f.close()
-            print("\n New filename: " + fname)
+        print( "\nSet filename\n---\n")  
+        print(" Old filename: " + fname)
+        fname = input(" New filename: ")
+        f = open(fname +".txt", "a")
+        f.close()
+        print("\n New filename: " + fname)
+    elif users_choice ==4:
+        print("\nScreen dumping\n---\n")
+        pyautogui.screenshot('scrdmp.png')
+        im =Image.open(r"scrdmp.png")
+        im.show()
+        print("\n---\n")
  # exit the while loop
     elif users_choice == 5:  
         break  
